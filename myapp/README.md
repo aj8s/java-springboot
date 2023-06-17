@@ -108,3 +108,13 @@ Java Springboot Projects
         * @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
     - Exclude security on health and info endpoints 
         * management.endpoints.web.exposure.exclude=hearth,info
+15. Spring Boot Properties
+    - Spring Boot can be configured in application.properties file
+    - Server port, context path, actuator, security etc
+    - spring boot has 1000+ properties...
+    - [Command properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html)
+16. Logging Levels
+    - TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF
+17. test
+18. test
+19. test
