@@ -11,4 +11,11 @@ public class FunRestController {
     public String sayHello() {
         return "Hello World!";
     }
+
+    @GetMapping("/health")
+    public String getAppHealth(){
+        return "App status is up and running!";
+    }
+
 }
+
