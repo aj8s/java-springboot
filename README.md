@@ -99,5 +99,12 @@ Java Springboot Projects
         * info.app.version=1.0.0
     - There are 10 + Spring Boot [Actuator Endpoints](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints)
     - Get a list of Beans - http://localhost:8080/actuator/beans
-
-    
+14. Spring boot actuator security 
+    - Add dependency `spring-boot-starter-security`
+    - Add following properties to application.properties
+        * spring.security.user.name=foo
+        * spring.security.user.password=foo
+    - Exclude the security auto configuration
+        * @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
+    - Exclude security on health and info endpoints 
+        * management.endpoints.web.exposure.exclude=hearth,info
