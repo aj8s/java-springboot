@@ -81,4 +81,23 @@ Java Springboot Projects
     - Remote Applications
     - Disable Caching
     - Automatic Build
-    - Developer Tools WebSite: https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-devtools
+    - [Developer Tools WebSite](https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-devtools)
+13. Spring Boot Actuator
+    - Production ready features to help you monitor and manage your application
+    - Health checks
+    - Add dependency `spring-boot-starter-actuator` and REST endpoints will be available
+    - http://localhost:8080/actuator - Actuator Endpoint
+    - http://localhost:8080/actuator/health - Health Endpoint
+    - http://localhost:8080/actuator/info - Info Endpoint
+    - Health is by default available, Info is not available by default
+    - To make Info available, add following properties to application.properties
+        * management.endpoints.web.exposure.include=hearth,info
+        * management.info.env.enabled=true
+    - Update the info properties in application.properties
+        * info.app.name=My Super Cool App
+        * info.app.description=This is a description of my app
+        * info.app.version=1.0.0
+    - There are 10 + Spring Boot [Actuator Endpoints](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints)
+    - Get a list of Beans - http://localhost:8080/actuator/beans
+
+    

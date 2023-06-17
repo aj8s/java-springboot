@@ -12,9 +12,9 @@ public class FunRestController {
         return "Hello World!";
     }
 
-    @GetMapping("/health")
-    public String getAppHealth(){
-        return "App status is up and running!";
+    @GetMapping("/workout")
+    public String getWorkout(){
+        return "Run 5K Daily.";
     }
 
 }
