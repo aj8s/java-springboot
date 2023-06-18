@@ -1,5 +1,5 @@
-# java-springboot
-Java Springboot Projects
+# java spring boot
+Java Spring boot Projects
 
 1. start.spring.io
 2. Create a Maven + Java Project
@@ -24,7 +24,7 @@ Java Springboot Projects
         - Aspects
         - Instrumentation
         - Messaging
-        - Transacation
+        - Transaction
     - Data Access/Integration
         - JDBC
         - ORM (Object Relational Mapping [Integration with Hibernate and JPA])
@@ -58,20 +58,20 @@ Java Springboot Projects
     - Add `@Value("${coach.name}")` to the field
     - Add `@Value("${team.name}")` to the field
 9. Templates
-    - Spring Boot includes auto-configuration for following template engines:
+    - Spring Boot includes autoconfiguration for following template engines:
         - FreeMarker
         - Groovy
         - Thymeleaf [Popular template engine]
         - Mustache
         - JSP
-10. Springboot Starters 
+10. Spring boot Starters 
     - A curated list of Maven dependencies for given area
     - A collection of related dependencies grouped together
     - Tested and verified by Spring developer team
     - easier for the Devs to get started
     - Reduces the amount of maven configuration
 11. Spring Boot Starter Parent
-    - Maven degaults defined in the starter parent
+    - Maven defaults defined in the starter parent
     - Default compiler level
     - UTF-8 source encoding and Others...
 12. Spring Boot DevTools
@@ -115,6 +115,34 @@ Java Springboot Projects
     - [Command properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html)
 16. Logging Levels
     - TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF
-17. test
+17. Spring Container
+    - Primary Functions
+      - Create and manage objects (Inversion of Control)
+      - Inject Object Dependencies (Dependency Injection)
+    - Injections Types 
+      - Constructor Injection
+      - Setter Injection
+    - Spring Autowired 
+      - For dependency injection spring can use auto-wiring
+      - Spring will look for the class that matches
+      - Spring will inject it automatically
+    - @component annotation marks the class as a Spring Bean and makes the candidate for dependency injection.
+      - Example - 
+        - Coach.java 
+           ``` 
+              public class Coach() {
+                  String getDailyWorkout();
+              }
+          ```
+        - CricketCoach.java
+        ```
+            @Component
+            public class CricketCoach implements Coach {
+                @Override
+                public String getDailyWorkOut() {
+                    return "Practice Fast Bowling for 15 miutes."
+                }
+            }
+         ```
 18. test
 19. test
